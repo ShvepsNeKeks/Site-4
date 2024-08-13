@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --index: calc(1vh + 1vw);
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.parallax {
+  height: 100vh;
+  perspective: 1px;
+  overflow-y: auto;
+}
+
+.parallax__container {
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  inset: 0;
+}
+
+.layer-1 {
+  transform: translateZ(-4px) scale(5);
+}
+
+.layer-2 {
+  top: 464px;
+  transform: translateZ(-2px) scale(3);
+}
+
+.layer-3 {
+  top: 768px;
+  transform: translateZ(-1px) scale(2);
+}
+
+.layer-4 {
+  transform: translateZ(0);
+}
+
+.layer-5 {
+  height: 1200px;
+  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+}
+
+.layer-6 {
+  top: 1200px;
+  height: 700px;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+}
+
+
+.header {}
+
+.header__logo {}
+
+.header__menu {}
+
+.menu__item {}
+
+.header__user {}
+
+.header__link {}
+
+.userpic {}
+
+.header__text-accent {}
+
+.content {}
+
+.content__blok-link {}
+
+.content__list {}
+
+.list__item {}
+
+.list__link {}
+
+.list__text {}
+
+.list__icon {}
+
+.content__center {}
+
+.banner {}
+
+.banner__liner {}
+
+.banner__text {}
+
+.content__title {}
+
+.content__sroll {}
+
+.content__nav {}
+
+.nav__list {}
+
+.nav_item {}
