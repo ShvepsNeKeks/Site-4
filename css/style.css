@@ -30,12 +30,13 @@ body {
   height: 100vh;
   transform-style: preserve-3d;
   position: relative;
-  transition: var(--transition);
 }
 
 .parallax__layer {
   position: absolute;
   inset: 0;
+  background-position: center;
+  background-size: cover;
 }
 
 /* .parallax__layer > img {
@@ -45,27 +46,35 @@ body {
 
 .layer-1 {
   transform: translateZ(-7px) scale(8);
+  width: calc(var(--index) * 64);
+  height: calc(var(--index) * 34);
 }
 
 .layer-2 {
   transform: translateZ(-6px) scale(7);
-  /* height: 1200px; */
+  width: calc(var(--index) * 64);
+  height: calc(var(--index) * 40);
   background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
 }
 
 .layer-3 {
-  top: calc(var(--index) * 22);
   transform: translateZ(-3px) scale(4);
+  top: calc(var(--index) * 75);
+  width: calc(var(--index) * 64);
+  height: calc(var(--index) * 47.4);
 }
 
 .layer-4 {
-  top: 768px;
+  top: calc(var(--index) * 60);
   transform: translateZ(-2px) scale(3);
+  width: calc(var(--index) * 64);
+  height: calc(var(--index) * 30.7);
 }
 
 .layer-5 {
-  top: 1200px;
+  top: calc(var(--index) * 75);
   transform: translateZ(-1px) scale(2);
+  height: 100vh;
 }
 
 .layer-5__liner-gr {
