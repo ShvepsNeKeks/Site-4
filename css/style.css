@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -10,6 +11,7 @@ html {
 
 :root {
   --index: calc(1vh + 1vw);
+  --transition: 1s cubic-bezier(0.000, 0.445, 0.115, 1.020);
 }
 
 body {
@@ -19,14 +21,16 @@ body {
 }
 
 .parallax {
-  height: 100vh;
   perspective: 1px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .parallax__container {
   height: 100vh;
   transform-style: preserve-3d;
+  position: relative;
+  transition: var(--transition);
 }
 
 .parallax__layer {
@@ -34,34 +38,61 @@ body {
   inset: 0;
 }
 
+/* .parallax__layer > img {
+  display: block;
+  width: 100%;
+} */
+
 .layer-1 {
-  transform: translateZ(-4px) scale(5);
+  transform: translateZ(-7px) scale(8);
 }
 
 .layer-2 {
-  top: 464px;
-  transform: translateZ(-2px) scale(3);
-}
-
-.layer-3 {
-  top: 768px;
-  transform: translateZ(-1px) scale(2);
-}
-
-.layer-4 {
-  transform: translateZ(0);
-}
-
-.layer-5 {
-  height: 1200px;
+  transform: translateZ(-6px) scale(7);
+  /* height: 1200px; */
   background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
 }
 
+.layer-3 {
+  top: calc(var(--index) * 22);
+  transform: translateZ(-3px) scale(4);
+}
+
+.layer-4 {
+  top: 768px;
+  transform: translateZ(-2px) scale(3);
+}
+
+.layer-5 {
+  top: 1200px;
+  transform: translateZ(-1px) scale(2);
+}
+
+.layer-5__liner-gr {
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+}
+
+.layer-5__bgc {
+  height: 100vh;
+  background-color: #0B1D26;
+}
+
 .layer-6 {
+  transform: translateZ(0);
+}
+
+/* .layer-6 {
   top: 1200px;
   height: 700px;
   background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
-}
+} */
+
+/* .layer-7 {
+  top: 1890px;
+  height: 3000px;
+  background-color: #0B1D26;
+} */
 
 
 .header {}
