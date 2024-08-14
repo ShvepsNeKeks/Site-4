@@ -36,29 +36,22 @@ body {
   position: absolute;
   inset: 0;
   background-position: center;
-  background-size: cover;
-}
-
-/* .parallax__layer > img {
-  display: block;
-  width: 100%;
-} */
+  background-size: cover}
 
 .layer-1 {
-  transform: translateZ(-7px) scale(8);
-  width: calc(var(--index) * 64);
-  height: calc(var(--index) * 34);
+  transform: translateZ(-5px) scale(6);
+  width: 100vw;
 }
 
 .layer-2 {
-  transform: translateZ(-6px) scale(7);
-  width: calc(var(--index) * 64);
-  height: calc(var(--index) * 40);
-  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+  transform: translateZ(-4px) scale(5);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(330.24deg, rgba(172, 185, 192, 0) 31.06%, #4b7183 108.93%);
 }
 
 .layer-3 {
-  transform: translateZ(-3px) scale(4);
+  transform: translateZ(-3px) scale(4.2);
   top: calc(var(--index) * 75);
   width: calc(var(--index) * 64);
   height: calc(var(--index) * 47.4);
@@ -66,23 +59,27 @@ body {
 
 .layer-4 {
   top: calc(var(--index) * 60);
-  transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3.2);
   width: calc(var(--index) * 64);
-  height: calc(var(--index) * 30.7);
+  height: calc(var(--index) * 32);
 }
 
 .layer-5 {
   top: calc(var(--index) * 75);
   transform: translateZ(-1px) scale(2);
+  width: 100vw;
   height: 100vh;
 }
 
 .layer-5__liner-gr {
-  height: 100vh;
+  width: 100vw;
+  height: calc(var(--index) * 23.4);
   background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
 }
 
 .layer-5__bgc {
+  width: calc(var(--index) * 64);
+  width: 100vw;
   height: 100vh;
   background-color: #0B1D26;
 }
