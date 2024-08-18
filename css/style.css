@@ -11,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #000;
+  background-color: #032c40;
   color: var(--weib-color);
 }
 
@@ -68,6 +68,14 @@ h1, h2, p {
   height: 30px;
 }
 
+       /* стили ссылок */
+.link-style__one {
+
+}
+
+.link-style__thy {
+
+}
 
 /* Слои паралкаса */
 
@@ -87,12 +95,12 @@ h1, h2, p {
   position: absolute;
   inset: 0;
   height: 100%;
-  background-position: 25% 5%;
+  background-position: 25% 1.5%;
   background-size: cover;
 }
 
 .layer-1 {
-  transform: translateZ(-5px) scale(6.1);
+  transform: translateZ(-5px) scale(6);
 }
 
 .layer-2 {
@@ -102,51 +110,52 @@ h1, h2, p {
 
 .layer-3 {
   transform: translateZ(-3px) scale(4.1);
-  top: calc(var(--index) * 55);
+  top: calc(var(--index) * 50);
+  height: 100%;
 }
 
 .layer-4 {
-  top: calc(var(--index) * 60);
+  top: calc(var(--index) * 70);
   transform: translateZ(-2px) scale(3.2);
+  height: 100%;
 }
 
 .layer-5 {
-  top: calc(var(--index) * 75);
-  transform: translateZ(-1px) scale(2.2);
+  top: calc(var(--index) * 95);
+  transform: translateZ(-1px) scale(2);
 }
 
-.layer-5__liner-gr {
-  height: inherit;
+/* .layer-5__liner-gr {
+  min-height: calc(var(--index) * 80);
   background: linear-gradient(180deg, rgba(56, 135, 174, 0) 0%, #032c40 61.38%);
-}
+} */
 
-.layer-5__bgc {
-  height: 1000px;
+/* .layer-5__bgc {
+  min-height: calc(var(--index) * 110);
   background-color: var(--bgc-color);
-  margin-top: -1px;
-}
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 93% 79%, 87% 76%, 84% 80%, 73% 76%, 65% 73%, 58% 76%, 50% 78%, 43% 72%, 39% 71%, 34% 76%, 29% 81%, 23% 78%, 21% 72%, 14% 65%, 11% 61%, 0 57%);
+} */
+
 
 .layer-6 {
   transform: translateZ(0);
 }
 
-/* .layer-6 {
-  top: 1200px;
-  height: 700px;
-  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
-} */
-
-/* .layer-7 {
-  top: 1890px;
-  height: 3000px;
-  background-color: #0B1D26;
+/* .layer-6::after {
+  content: '';
+  background-color: #032c40;
+  background-position: bottom;
+  display: block;
+  height: 50%;
 } */
 
 /* Шапка */
 
+
 .wrapper__container {
   margin: 0 auto;
-  padding-top: 64px;
+  padding: 64px 0 20px;
+  padding: 0 auto;
   max-width: 1760px;
 }
 
@@ -178,9 +187,10 @@ h1, h2, p {
   text-decoration: none;
 }
 
-/* .menu__link:hover {
-  cursor: pointer;
-} */
+.menu__link:hover {
+  transition: 1.1s;
+  color: var(--accent-color);
+}
 
 .header__user {
   display: flex;
@@ -224,22 +234,23 @@ h1, h2, p {
 .content__center {} */
 
 .banner {
-  margin-bottom: 32px;
-  display: flex;
-}
-
-.banner__liner {
-  margin-right: 32px;
-  align-self: center;
-  width: 72px;
-  height: 2px;
-  background-color: var(--accent-color);
 }
 
 .banner__text {
+  align-self: center;
   color: var(--Accent, #FBD784);
   letter-spacing: 0.375em;
   text-transform: uppercase;
+}
+
+.banner__text::before {
+  content: '';
+  margin-right: 32px;
+  margin-bottom: 8px;
+  display: inline-block;
+  width: 72px;
+  height: 2px;
+  background-color: var(--accent-color);
 }
 
 .content__title {
@@ -284,8 +295,7 @@ h1, h2, p {
 
 .main-content__blok {
   display: flex;
-  margin-bottom: 180px;
-  position: relative;
+  /* position: relative; */
 }
 
 /* .main-content__number-blok {
@@ -308,7 +318,6 @@ h1, h2, p {
   margin: 140px 150px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   gap: 30px;
 }
 
@@ -333,3 +342,60 @@ h1, h2, p {
   max-width: 35.5em;
   max-height: 45em;
 }
+
+/*Подвал */
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 37.5em;
+}
+.footer__blok-left {
+}
+.header__logo {
+  margin-bottom: 35px;
+}
+.footer__slogan {
+  margin-bottom: 7.625em;
+}
+.footer__copy {
+}
+.footer__blok-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12.5em ;
+}
+.footer__blok-elim {
+  max-width: 300px;
+}
+
+.footer__h3 {
+  margin-bottom: 15px;
+  color: var(--accent-color);
+  font-size: 2.1875em;
+  min-width: 300px;
+}
+
+.footer__h3::after {
+  content: '';
+  margin-top: 10px;
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.footer__list {
+  line-height: 50px;
+}
+.list__item > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list__item > a:hover {
+  transition: 1.2s;
+  color: #FBD784;
+} 
+
+

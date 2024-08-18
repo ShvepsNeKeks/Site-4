@@ -1,4 +1,4 @@
-@media screen and (max-width:1280px) {
+/* @media screen and (max-width:1280px) {
   .main-content__blok {
     padding: 40px;
     flex-direction: column;
@@ -7,4 +7,4 @@
   .main-content__blok:nth-child(2) {
     flex-direction: column;
   }
-}
+} */
