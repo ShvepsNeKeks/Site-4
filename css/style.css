@@ -101,6 +101,7 @@ h1, h2, p {
 
 .layer-1 {
   transform: translateZ(-5px) scale(6);
+  clip-path: inset(0 0 18% 0);
 }
 
 .layer-2 {
@@ -111,14 +112,22 @@ h1, h2, p {
 .layer-3 {
   transform: translateZ(-3px) scale(4.1);
   top: calc(var(--index) * 50);
-  height: 100%;
+  clip-path: inset(0 0 10% 0);
 }
 
 .layer-4 {
   top: calc(var(--index) * 70);
   transform: translateZ(-2px) scale(3.2);
-  height: 100%;
 }
+
+.layer-4::after {
+  content: '';
+  margin-top: 1px;
+  display: block;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(56, 135, 174, 0) 0%, #032c40 90%);
+}
+
 
 .layer-5 {
   top: calc(var(--index) * 95);
@@ -131,7 +140,7 @@ h1, h2, p {
 } */
 
 /* .layer-5__bgc {
-  min-height: calc(var(--index) * 110);
+  min-height: calc(var(--index) * 50);
   background-color: var(--bgc-color);
   clip-path: polygon(0 0, 100% 0, 100% 78%, 93% 79%, 87% 76%, 84% 80%, 73% 76%, 65% 73%, 58% 76%, 50% 78%, 43% 72%, 39% 71%, 34% 76%, 29% 81%, 23% 78%, 21% 72%, 14% 65%, 11% 61%, 0 57%);
 } */
